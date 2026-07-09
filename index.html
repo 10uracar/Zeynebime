@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>❤️ Zeynebime ❤️</title>
+
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<link
+rel="stylesheet"
+href="style.css">
+
+</head>
+
+<body>
+
+<!-- Background -->
+
+<div id="heartsContainer"></div>
+
+<div id="sakuraContainer"></div>
+
+<!-- Theme Button -->
+
+<button
+id="themeButton"
+class="themeButton">
+
+⚙️
+
+</button>
+
+<!-- Theme Panel -->
+
+<aside
+id="themePanel"
+class="themePanel">
+
+<h2>
+
+🎨 Tema Merkezi
+
+</h2>
+
+<div class="themeGrid">
+
+<button class="themeColor" data-color="#ff5f98">🍓 Strawberry</button>
+
+<button class="themeColor" data-color="#ff8ec5">🌸 Sakura</button>
+
+<button class="themeColor" data-color="#9d7dff">💜 Lavender</button>
+
+<button class="themeColor" data-color="#55a8ff">💙 Ocean</button>
+
+<button class="themeColor" data-color="#47c97b">💚 Mint</button>
+
+<button class="themeColor" data-color="#ff944d">🧡 Sunset</button>
+
+<button class="themeColor" data-color="#2d2d44">🌙 Midnight</button>
+
+</div>
+
+<label>
+
+Özel Renk
+
+</label>
+
+<input
+type="color"
+id="customColor"
+value="#ff5f98">
+
+<div class="themeModes">
+
+<button id="lightMode">
+
+☀️ Açık
+
+</button>
+
+<button id="darkMode">
+
+🌙 Koyu
+
+</button>
+
+</div>
+
+</aside>
+
+<button
+id="quickButton"
+class="themeButton quickButton">
+
+🧭
+
+</button>
+
+<aside
+id="quickPanel"
+class="quickPanel">
+
+<h2>
+
+🧭 Hızlı Erişim
+
+</h2>
+
+<button data-target="top">
+❤️ Bizim Hikayemiz
+</button>
+
+<button data-target="gallery">
+📷 Galeri
+</button>
+
+<button data-target="birthdays">
+🎂 Doğum Günlerimiz
+</button>
+
+<button data-target="spotify">
+🎵 Spotify
+</button>
+
+<button data-target="liveStats">
+⏳ Ne kadar süredir birlikteyiz?
+</button>
+
+<button data-target="weather">
+☀️ Hava Durumu
+</button>
+
+<button data-target="todo">
+🌍 Yapılacaklar
+</button>
+
+<button data-target="letter">
+💌 Sevdiğime Not
+</button>
+
+</aside>
+
+<!-- Hero -->
+<header id="top" class="hero">
+
+<div class="heroLeft">
+
+<h1>
+
+Bizim Hikayemiz ❤️
+
+</h1>
+
+<p>
+
+Bu siteyi,
+ikimizin en güzel anılarını saklamak için hazırladım.
+
+Her fotoğraf,
+her satır,
+her anı...
+
+Sadece bize ait.  :)
+
+</p>
+
+</div>
+
+<div class="heroRight">
+
+<div class="photoCard">
+
+<div class="photoPlaceholder">
+
+❤️
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- ===========================
+     GALLERY
+=========================== -->
+
+<section id="gallery" class="section reveal">
+
+    <h2>📸 Fotoğraf Galerimiz</h2>
+
+    <p class="sectionDescription">
+
+        Birlikte biriktirdiğimiz ve biriktireceğimiz en güzel anılar
+
+    </p>
+
+    <div class="galleryGrid">
+
+        <div class="galleryItem">
+            <img
+src="images/photo1.jpg"
+alt="Fotoğraf 1"
+class="galleryImage">
+        </div>
+
+        <div class="galleryItem">
+            <img
+src="images/photo2.jpg"
+alt="Fotoğraf 2"
+class="galleryImage">
+        </div>
+
+        <div class="galleryItem">
+            <img
+src="images/photo3.jpg"
+alt="Fotoğraf 3"
+class="galleryImage">
+        </div>
+
+        <div class="galleryItem">
+            <img
+src="images/photo4.jpg"
+alt="Fotoğraf 4"
+class="galleryImage">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+     BIRTHDAY
+=========================== -->
+
+<section id="birthdays" class="section reveal">
+
+    <h2>🎂 Doğum Günlerimiz</h2>
+
+    <div class="birthdayGrid">
+
+        <div class="birthdayCard">
+
+            <h3>
+
+                👨 Onur
+
+            </h3>
+
+            <h4>
+
+                19 Ocak
+
+            </h4>
+
+            <span id="onurBirthday">
+
+                ...
+
+            </span>
+
+        </div>
+
+        <div class="birthdayCard">
+
+            <h3>
+
+                👩 Zeynep
+
+            </h3>
+
+            <h4>
+
+                4 Temmuz
+
+            </h4>
+
+            <span id="zeynepBirthday">
+
+                ...
+
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+     SPOTIFY
+=========================== -->
+
+<section id="spotify" class="section reveal">
+
+    <h2>🎵 Ortak Şarkı Listemiz</h2>
+
+    <p class="sectionDescription">
+
+        İkimize ait ortak
+        bir Spotify listemiz olsun istedim :)
+
+    </p>
+
+<div class="spotifyCard">
+
+    <div class="spotifyInfo">
+
+        <div class="spotifyIcon">
+
+            🎵
+
+        </div>
+
+        <div class="spotifyText">
+
+            <h3>Spotify Çalma Listemiz</h3>
+
+            <p>VI</p>
+
+        </div>
+
+    </div>
+
+    <iframe
+    id="spotifyEmbed"
+    style="border-radius:16px"
+    src="https://open.spotify.com/embed/playlist/5FDwLL8O7PPDeioYYdpWWu"
+    width="100%"
+    height="700"
+    frameborder="0"
+    allowfullscreen
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy">
+</iframe>
+
+</div>
+
+</section>
+
+
+<!-- ===========================
+     LIVE RELATIONSHIP STATS
+=========================== -->
+
+<section id="liveStats" class="section reveal">
+
+    <h2>Ne kadar süredir birlikteyiz?</h2>
+
+    <div class="statsGrid">
+
+        <div class="statCard">
+            <h3>📅 Gün</h3>
+            <span id="daysLive">0</span>
+        </div>
+
+        <div class="statCard">
+            <h3>🕒 Saat</h3>
+            <span id="hoursLive">0</span>
+        </div>
+
+        <div class="statCard">
+            <h3>⏱ Dakika</h3>
+            <span id="minutesLive">0</span>
+        </div>
+
+        <div class="statCard">
+            <h3>⚡ Saniye</h3>
+            <span id="secondsLive">0</span>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+     WEATHER
+=========================== -->
+
+<section id="weather" class="section reveal">
+
+    <h2>📍 Memleketlerimiz</h2>
+
+    <div class="weatherGrid">
+
+        <div class="weatherCard">
+
+            <h3>📍 Karabük</h3>
+
+            <div id="weatherKarabuk">
+
+                Yükleniyor...
+
+            </div>
+
+        </div>
+
+        <div class="weatherCard">
+
+            <h3>📍 Kastamonu</h3>
+
+            <div id="weatherKastamonu">
+
+                Yükleniyor...
+
+            </div>
+
+        </div>
+
+        <div class="weatherCard">
+
+            <h3>📍 Kayseri</h3>
+
+            <div id="weatherKayseri">
+
+                Yükleniyor...
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+     TO DO LIST
+=========================== -->
+
+<section id="todo" class="section reveal">
+
+    <h2>🌍 Yapılacaklar Listesi</h2>
+
+    <div class="todoCard">
+
+        <label><input type="checkbox"> ☕ Havuzlu Bahçede Buluşmak</label>
+
+        <label><input type="checkbox"> 🎬 Sinemaya gitmek</label>
+
+        <label><input type="checkbox"> 🏕️ Beraber Last of Us Bitirmek</label>
+
+        <label><input type="checkbox"> 🌅 TikTok Çekmek</label>   
+
+        <div class="progressContainer">
+
+            <div id="todoProgress"></div>
+
+        </div>
+
+        <p id="todoText">
+
+            0 / 5 tamamlandı ❤️
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+     LETTER
+=========================== -->
+
+<section id="letter" class="section reveal">
+
+<h2>💌 Zeynebime ❤️</h2>
+
+<div class="todoCard">
+
+<p>
+
+İkimiz için güzel bir web sitesi yapmak istedim :)
+
+<br><br>
+
+Çok uzun bir süredir aklımdaydı bunu yapmak. 
+
+<br><br>
+
+İkimize özel olan anıları
+
+sana yazdığım yazıları veya işine yarayabilecek
+
+bazı ek materyalleri bulabilceksin :)
+
+<br><br>
+
+Sana vermiş olduğum sevginin ve ilginin bir göstergesi
+
+olarak bu siteyi yaptım. Burayı seninle birlikte
+
+daha çok renklendireceğim :)
+
+<br><br>
+
+Birlikte daha göreceğimiz,
+
+güleceğimiz,
+
+gezeceğimiz,
+
+kutlayacağımız
+
+ve yıllar sonra dönüp tekrar bakacağımız
+
+çok fazla anımız olsun istiyorum.
+
+<br><br>
+
+Bu site hiçbir zaman tamamlanmayacak.
+
+Çünkü seninle yaşadığımız her güzel anıyı buraya eklemeye devam edeceğim.
+
+<br><br>
+
+Seni gerçekten çok seviyorum. ❤️
+
+<br><br>
+
+<b>— Onur</b>
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ===========================
+     FOOTER
+=========================== -->
+
+<footer>
+
+    <div class="footerContent">
+
+        <span>
+            Made with ❤️ by Onur
+        </span>
+
+        <span>
+            Zeynebime :)
+        </span>
+
+    </div>
+
+</footer>
+
+<!-- ===========================
+     LIGHTBOX
+=========================== -->
+
+<div id="lightbox" class="lightbox">
+
+    <span id="closeLightbox">
+
+        ✕
+
+    </span>
+
+    <img
+        id="lightboxImage"
+        src=""
+        alt="">
+
+</div>
+
+<!-- ===========================
+     SCROLL TOP
+=========================== -->
+
+<button
+id="scrollTopButton">
+
+⬆
+
+</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>

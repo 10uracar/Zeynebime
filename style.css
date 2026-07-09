@@ -1,0 +1,2495 @@
+:root{
+
+    --primary:#ff5f98;
+    --primary-light:#ffd7e7;
+    --primary-dark:#ff3f86;
+
+    --bg:#fff8fb;
+    --surface:#ffffff;
+    --text:#333333;
+
+    --shadow:0 15px 40px rgba(255,95,152,.25);
+}
+
+/* =====================================================
+   PROJECT ZEYON v2.0
+   STYLE.CSS
+   PART 1
+===================================================== */
+
+/* ===============================
+   GOOGLE FONTS RESET
+=============================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:linear-gradient(
+        180deg,
+        #fff8fc,
+        #ffeef5
+    );
+
+    color:var(--text);
+
+    font-family:"Poppins",sans-serif;
+
+    overflow-x:hidden;
+
+    transition:
+    background .35s,
+    color .35s;
+
+}
+
+/* ===============================
+   DARK MODE
+=============================== */
+
+body.dark{
+
+    --background:#141414;
+
+    --card:rgba(35,35,35,.72);
+
+    --text:#ffffff;
+
+    background:
+    linear-gradient(
+        180deg,
+        #111111,
+        #1b1b1b
+    );
+
+}
+
+/* ===============================
+   TITLES
+=============================== */
+
+h1{
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:5rem;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+h2{
+
+    text-align:center;
+
+    font-size:2.3rem;
+
+    margin-bottom:40px;
+
+    color:var(--primary);
+
+}
+
+h3{
+
+    margin-bottom:15px;
+
+}
+
+p{
+
+    line-height:1.8;
+
+}
+
+/* ===============================
+   SECTION
+=============================== */
+
+.section{
+
+    width:min(1200px,92%);
+
+    margin:120px auto;
+
+}
+
+/* ===============================
+   BUTTONS
+=============================== */
+
+button{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    font-family:"Poppins",sans-serif;
+
+    transition:.3s;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* ===============================
+   GLASS CARD
+=============================== */
+
+.photoCard,
+.counterCard,
+.birthdayCard,
+.spotifyCard,
+.memoryCard,
+.timelineContent{
+
+    background:var(--card);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-radius:28px;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ===============================
+   BACKGROUND CONTAINERS
+=============================== */
+
+#heartsContainer,
+#sakuraContainer{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:-1;
+
+}
+
+/* ===============================
+   IMAGES
+=============================== */
+
+img{
+
+    display:block;
+
+    width:100%;
+
+    border-radius:22px;
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
+}
+
+/* ===============================
+   SELECTION
+=============================== */
+
+::selection{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/* ===============================
+   SCROLLBAR
+=============================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:999px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ffe8f1;
+
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    width:min(1200px,92%);
+
+    margin:80px auto 40px;
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    gap:60px;
+
+    align-items:center;
+
+    min-height:90vh;
+
+}
+
+.heroLeft p{
+
+    font-size:1.05rem;
+
+    color:#666;
+
+    max-width:560px;
+
+}
+
+body.dark .heroLeft p{
+
+    color:#d5d5d5;
+
+}
+
+.heroButtons{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-top:35px;
+
+    flex-wrap:wrap;
+
+}
+
+.heroButtons button,
+.heroButtons a{
+
+    padding:16px 28px;
+
+    border-radius:999px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-weight:600;
+
+    box-shadow:0 15px 30px rgba(255,95,152,.25);
+
+    transition:.3s;
+
+}
+
+.heroButtons button:hover,
+.heroButtons a:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 22px 40px rgba(255,95,152,.35);
+
+}
+
+.heroRight{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.photoCard{
+
+    width:380px;
+
+    height:470px;
+
+    padding:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.photoPlaceholder{
+
+    width:100%;
+
+    height:100%;
+
+    border-radius:24px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:95px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ffd5e5,
+        #fff
+    );
+
+    color:var(--primary);
+
+}
+
+/* =====================================================
+   THEME BUTTON
+===================================================== */
+
+.themeButton{
+
+    position:fixed;
+
+    top:22px;
+
+    right:22px;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:25px;
+
+    box-shadow:0 18px 35px rgba(255,95,152,.25);
+
+    z-index:9999;
+
+}
+
+.themeButton:hover{
+
+    transform:rotate(18deg) scale(1.08);
+
+}
+
+/* =====================================================
+   THEME PANEL
+===================================================== */
+
+.themePanel{
+
+    position:fixed;
+
+    top:0;
+
+    right:-370px;
+
+    width:340px;
+
+    height:100vh;
+
+    padding:28px;
+
+    background:rgba(255,255,255,.88);
+
+    backdrop-filter:blur(22px);
+
+    -webkit-backdrop-filter:blur(22px);
+
+    box-shadow:-20px 0 40px rgba(0,0,0,.12);
+
+    transition:right .45s cubic-bezier(.2,.8,.2,1);
+
+    z-index:9998;
+
+    overflow-y:auto;
+
+}
+
+.themePanel.open{
+
+    right:0;
+
+}
+
+body.dark .themePanel{
+
+    background:rgba(25,25,25,.93);
+
+}
+
+.themeGrid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+
+    margin:22px 0;
+
+}
+
+.themeColor{
+
+    padding:13px;
+
+    border-radius:14px;
+
+    background:white;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+    font-weight:600;
+
+}
+
+body.dark .themeColor{
+
+    background:#2b2b2b;
+
+    color:white;
+
+}
+
+.themeColor:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.themeModes{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-top:22px;
+
+}
+
+.themeModes button{
+
+    flex:1;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.themeModes button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+#customColor{
+
+    width:100%;
+
+    height:55px;
+
+    margin-top:12px;
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:900px){
+
+.hero{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+    min-height:auto;
+
+    margin-top:130px;
+
+}
+
+.heroLeft p{
+
+    margin:auto;
+
+}
+
+.heroButtons{
+
+    justify-content:center;
+
+}
+
+.photoCard{
+
+    width:320px;
+
+    height:400px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.themePanel{
+
+    width:100%;
+
+    right:-100%;
+
+}
+
+.themePanel.open{
+
+    right:0;
+
+}
+
+.photoCard{
+
+    width:270px;
+
+    height:340px;
+
+}
+
+h1{
+
+    font-size:3.6rem;
+
+}
+
+h2{
+
+    font-size:1.8rem;
+
+}
+
+}
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.galleryGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:24px;
+
+}
+
+.galleryItem{
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    cursor:pointer;
+
+    box-shadow:var(--shadow);
+
+}
+
+.galleryItem img{
+
+    width:100%;
+
+    aspect-ratio:4/5;
+
+    height:auto;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.45s;
+
+}
+
+.galleryItem:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/* =====================================================
+   COUNTER
+===================================================== */
+
+.counterGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:25px;
+
+}
+
+.counterCard{
+
+    padding:45px;
+
+    text-align:center;
+
+}
+
+.counterCard span{
+
+    display:block;
+
+    font-size:3rem;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+    margin:20px 0;
+
+}
+
+/* =====================================================
+   BIRTHDAY
+===================================================== */
+
+.birthdayGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+.birthdayCard{
+
+    padding:35px;
+
+    text-align:center;
+
+}
+
+.birthdayCard h4{
+
+    color:var(--primary);
+
+    margin:12px 0;
+
+}
+
+.birthdayCard span{
+
+    display:block;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+}
+
+/* =====================================================
+   SPOTIFY
+===================================================== */
+
+.spotifyCard{
+
+    padding:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+#spotifyEmbed{
+
+    width:100%;
+
+}
+
+.spotifyInfo{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:15px;
+
+    text-align:center;
+
+    flex-wrap:wrap;
+
+}
+
+.spotifyText{
+
+    text-align:center;
+
+}
+
+.spotifyText h3{
+
+    font-size:1.5rem;
+
+    word-break:break-word;
+
+}
+
+/* =====================================================
+   SECTION DESCRIPTION
+===================================================== */
+
+.sectionDescription{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+    color:#777;
+
+}
+
+body.dark .sectionDescription{
+
+    color:#ccc;
+
+}
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+.timeline{
+
+    position:relative;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:24px;
+
+    top:0;
+
+    bottom:0;
+
+    width:4px;
+
+    background:var(--primary);
+
+    border-radius:999px;
+
+}
+
+.timelineItem{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:30px;
+
+    margin-bottom:45px;
+
+}
+
+.timelineDot{
+
+    width:22px;
+
+    height:22px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    flex-shrink:0;
+
+    margin-top:18px;
+
+    box-shadow:0 0 0 8px rgba(255,95,152,.18);
+
+}
+
+.timelineContent{
+
+    padding:28px;
+
+    flex:1;
+
+}
+
+/* =====================================================
+   MEMORY BOOK
+===================================================== */
+
+.memoryGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+.memoryCard{
+
+    padding:30px;
+
+    transition:.35s;
+
+}
+
+.memoryCard:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/*======================================================
+    FOOTER
+======================================================*/
+
+footer{
+
+    margin-top:120px;
+
+    padding:30px 8%;
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+    background:transparent;
+
+}
+
+.footerContent{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    color:var(--text);
+
+    opacity:.75;
+
+    font-size:.95rem;
+
+}
+
+@media(max-width:768px){
+
+.footerContent{
+
+    flex-direction:column;
+
+    gap:10px;
+
+    text-align:center;
+
+}
+
+}
+
+/* =====================================================
+   LIGHTBOX
+===================================================== */
+
+.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.85);
+
+    z-index:99999;
+
+}
+
+.lightbox.active{
+
+    display:flex;
+
+}
+
+.lightbox img{
+
+    width:min(90%,900px);
+
+    max-height:90vh;
+
+    object-fit:contain;
+
+    border-radius:20px;
+
+}
+
+#closeLightbox{
+
+    position:absolute;
+
+    top:25px;
+
+    right:35px;
+
+    color:white;
+
+    font-size:42px;
+
+    cursor:pointer;
+
+}
+
+/* =====================================================
+   SCROLL BUTTON
+===================================================== */
+
+#scrollTopButton{
+
+    position:fixed;
+
+    bottom:28px;
+
+    right:28px;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:20px;
+
+    box-shadow:0 15px 35px rgba(255,95,152,.30);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.35s;
+
+    z-index:999;
+
+}
+
+#scrollTopButton.show{
+
+    opacity:1;
+
+    pointer-events:auto;
+
+}
+
+#scrollTopButton:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* =====================================================
+   SIMPLE ANIMATIONS
+===================================================== */
+
+.photoCard,
+.counterCard,
+.birthdayCard,
+.memoryCard,
+.galleryItem,
+.spotifyCard,
+.timelineContent{
+
+    transition:
+    transform .35s,
+    box-shadow .35s;
+
+}
+
+.photoCard:hover,
+.counterCard:hover,
+.birthdayCard:hover,
+.spotifyCard:hover,
+.timelineContent:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 25px 55px rgba(0,0,0,.14);
+
+}
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes floatingHeart{
+
+    from{
+
+        transform:
+        translateY(0)
+        scale(.8);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:.22;
+
+    }
+
+    to{
+
+        transform:
+        translateY(-120vh)
+        scale(1.3);
+
+        opacity:0;
+
+    }
+
+}
+
+@keyframes sakuraFall{
+
+    from{
+
+        transform:
+        translateY(-120px)
+        rotate(0deg);
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:.45;
+
+    }
+
+    to{
+
+        transform:
+        translateY(120vh)
+        translateX(80px)
+        rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+/* =====================================================
+   FLOATING HEART
+===================================================== */
+
+.floatingHeart{
+
+    position:fixed;
+
+    bottom:-40px;
+
+    color:var(--primary);
+
+    opacity:.15;
+
+    font-size:18px;
+
+    pointer-events:none;
+
+    animation:floatingHeart linear forwards;
+
+}
+
+/* =====================================================
+   SAKURA
+===================================================== */
+
+.sakura{
+
+    position:fixed;
+
+    top:-40px;
+
+    pointer-events:none;
+
+    user-select:none;
+
+    opacity:.15;
+
+    font-size:14px;
+
+    filter:blur(.3px);
+
+    animation-name:sakuraFall;
+
+    animation-timing-function:linear;
+
+    animation-fill-mode:forwards;
+
+    z-index:-1;
+
+}
+
+/* =====================================================
+   CLICK HEART
+===================================================== */
+
+.clickHeart{
+
+    position:fixed;
+
+    pointer-events:none;
+
+    font-size:22px;
+
+    color:var(--primary);
+
+    animation:heartClick .8s forwards;
+
+    z-index:999999;
+
+}
+
+@keyframes heartClick{
+
+    from{
+
+        transform:
+        translate(-50%,-50%)
+        scale(.4);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+        translate(-50%,-140%)
+        scale(1.5);
+
+        opacity:0;
+
+    }
+
+}
+
+/* =====================================================
+   SCROLL ANIMATION
+===================================================== */
+
+.section{
+
+    animation:fadeUp .8s ease;
+
+}
+
+/* =====================================================
+   MOBILE FIXES
+===================================================== */
+
+@media(max-width:768px){
+
+.timeline::before{
+
+    left:11px;
+
+}
+
+.timelineItem{
+
+    gap:18px;
+
+}
+
+.timelineDot{
+
+    width:18px;
+
+    height:18px;
+
+}
+
+.heroButtons{
+
+    flex-direction:column;
+
+}
+
+.heroButtons button,
+.heroButtons a{
+
+    width:100%;
+
+}
+
+.themeButton{
+
+    width:52px;
+
+    height:52px;
+
+    font-size:20px;
+
+}
+
+}
+
+/* =====================================================
+   END OF CSS
+===================================================== */
+
+/* =====================================================
+   HERO PREMIUM UPGRADE
+===================================================== */
+
+.hero{
+
+    position:relative;
+
+    overflow:visible;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        rgba(255,95,152,.18),
+        transparent 70%
+    );
+
+    top:-180px;
+
+    left:-150px;
+
+    filter:blur(40px);
+
+    z-index:-1;
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        rgba(255,170,210,.20),
+        transparent 70%
+    );
+
+    bottom:-120px;
+
+    right:-120px;
+
+    filter:blur(35px);
+
+    z-index:-1;
+
+}
+
+/* ========================= */
+
+.photoCard{
+
+    transition:
+    .45s;
+
+    transform-style:preserve-3d;
+
+}
+
+.photoCard:hover{
+
+    transform:
+    rotate(-2deg)
+    scale(1.03);
+
+}
+
+/* ========================= */
+
+.photoPlaceholder{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.photoPlaceholder::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
+
+    transform:translateX(-100%);
+
+}
+
+.photoCard:hover .photoPlaceholder::before{
+
+    animation:
+    shine 1.2s;
+
+}
+
+@keyframes shine{
+
+    to{
+
+        transform:
+        translateX(220%);
+
+    }
+
+}
+
+/* ========================= */
+
+.heroButtons button,
+.heroButtons a{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.heroButtons button::before,
+.heroButtons a::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    120deg,
+
+    transparent,
+
+    rgba(255,255,255,.4),
+
+    transparent
+
+    );
+
+    transform:
+    translateX(-120%);
+
+}
+
+.heroButtons button:hover::before,
+.heroButtons a:hover::before{
+
+    animation:
+    shine
+    .9s;
+
+}
+
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+
+.reveal{
+    opacity:1;
+    transform:none;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:none;
+}
+
+/*======================================================
+    LIVE STATS
+======================================================*/
+
+.statsGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:22px;
+
+    margin-top:40px;
+
+}
+
+.statCard{
+
+    background:var(--card);
+
+    border-radius:24px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    backdrop-filter:blur(12px);
+
+    transition:.35s;
+
+}
+
+.statCard:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.statCard h3{
+
+    margin-bottom:20px;
+
+    color:var(--primary);
+
+}
+
+.statCard span{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+/*======================================================
+    WEATHER
+======================================================*/
+
+.weatherGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:24px;
+
+}
+
+.weatherCard{
+
+    background:var(--card);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:24px;
+
+    padding:28px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.weatherCard:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.weatherCard h3{
+
+    color:var(--primary);
+
+    margin-bottom:18px;
+
+}
+
+.weatherCard div{
+
+    line-height:2;
+
+    font-size:1.05rem;
+
+}
+
+.weatherCard strong{
+
+    display:block;
+
+    font-size:2rem;
+
+    color:var(--primary);
+
+    margin-bottom:12px;
+
+}
+
+/*======================================================
+    TO DO LIST
+======================================================*/
+
+.todoCard{
+
+    background:var(--card);
+
+    padding:35px;
+
+    border-radius:24px;
+
+    box-shadow:var(--shadow);
+
+    backdrop-filter:blur(12px);
+
+}
+
+.todoCard label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin:18px 0;
+
+    cursor:pointer;
+
+    font-size:1.05rem;
+
+}
+
+.todoCard input{
+
+    width:20px;
+
+    height:20px;
+
+    accent-color:var(--primary);
+
+}
+
+.progressContainer{
+
+    width:100%;
+
+    height:14px;
+
+    border-radius:999px;
+
+    background:rgba(0,0,0,.08);
+
+    margin-top:30px;
+
+    overflow:hidden;
+
+}
+
+#todoProgress{
+
+    width:0;
+
+    height:100%;
+
+    background:var(--primary);
+
+    transition:.4s;
+
+}
+
+#todoText{
+
+    text-align:center;
+
+    margin-top:18px;
+
+    font-weight:600;
+
+    color:var(--primary);
+
+}
+
+/*======================================================
+        RESPONSIVE V3 - PART 1
+======================================================*/
+
+@media (max-width:1024px){
+
+/* Genel */
+
+.section{
+
+    width:min(92%,900px);
+
+    margin:70px auto;
+
+}
+
+/* Hero */
+
+.hero{
+
+    width:min(92%,900px);
+
+    margin:40px auto;
+
+    min-height:auto;
+
+    grid-template-columns:1fr;
+
+    gap:45px;
+
+    text-align:center;
+
+}
+
+.heroLeft{
+
+    order:2;
+
+}
+
+.heroRight{
+
+    order:1;
+
+    justify-content:center;
+
+}
+
+.heroLeft h1{
+
+    font-size:4rem;
+
+}
+
+.heroLeft p{
+
+    margin:20px auto;
+
+    max-width:650px;
+
+}
+
+.heroButtons{
+
+    justify-content:center;
+
+}
+
+.photoCard{
+
+    width:340px;
+
+    height:420px;
+
+    margin:auto;
+
+}
+
+/* Tema */
+
+.themePanel{
+
+    width:320px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.section{
+
+    width:92%;
+
+    margin:55px auto;
+
+}
+
+.hero{
+
+    margin-top:90px;
+
+    gap:35px;
+
+}
+
+.heroLeft h1{
+
+    font-size:3rem;
+
+}
+
+.heroLeft p{
+
+    font-size:1rem;
+
+}
+
+.photoCard{
+
+    width:270px;
+
+    height:340px;
+
+}
+
+.heroButtons{
+
+    flex-direction:column;
+
+}
+
+.heroButtons button,
+.heroButtons a{
+
+    width:100%;
+
+}
+
+.themePanel{
+
+    width:100%;
+
+    right:-100%;
+
+}
+
+.themePanel.open{
+
+    right:0;
+
+}
+
+}
+
+
+/*======================================================
+        RESPONSIVE V3 - PART 2
+======================================================*/
+
+@media (max-width:1024px){
+
+/* Galeri */
+
+.galleryGrid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.galleryItem img{
+
+    width:100%;
+
+    aspect-ratio:4/5;
+
+    object-fit:cover;
+
+    height:auto;
+
+}
+
+}
+
+
+/* ========================= */
+
+@media (max-width:768px){
+
+.galleryGrid{
+
+    grid-template-columns:1fr;
+
+}
+
+.galleryItem img{
+
+    height:320px;
+
+}
+
+}
+
+/*======================================================
+        RESPONSIVE V3 - PART 3
+======================================================*/
+
+@media (max-width:1024px){
+
+/* Spotify */
+
+.spotifyCard{
+
+    padding:25px;
+
+}
+
+.spotifyCard iframe{
+
+    height:520px !important;
+
+    border-radius:18px;
+
+}
+
+/* Sayaç */
+
+.statsGrid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.statCard{
+
+    padding:24px;
+
+}
+
+.statCard span{
+
+    font-size:2.2rem;
+
+}
+
+/* Doğum Günleri */
+
+.birthdayGrid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.birthdayCard{
+
+    padding:28px;
+
+}
+
+/* Hava */
+
+.weatherGrid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.weatherCard{
+
+    padding:24px;
+
+}
+
+.weatherCard strong{
+
+    font-size:1.8rem;
+
+}
+
+/* Yapılacaklar */
+
+.todoCard{
+
+    padding:28px;
+
+}
+
+.todoCard label{
+
+    font-size:1rem;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.spotifyCard iframe{
+
+    height:420px !important;
+
+}
+
+.statsGrid{
+
+    grid-template-columns:1fr;
+
+}
+
+.birthdayGrid{
+
+    grid-template-columns:1fr;
+
+}
+
+.weatherGrid{
+
+    grid-template-columns:1fr;
+
+}
+
+.todoCard{
+
+    padding:20px;
+
+}
+
+.todoCard label{
+
+    font-size:.95rem;
+
+}
+
+}
+
+/*======================================================
+        RESPONSIVE V3 - PART 4
+======================================================*/
+
+@media (max-width:768px){
+
+/* Footer */
+
+.footerContent{
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    gap:14px;
+
+}
+
+/* Lightbox */
+
+.lightbox img{
+
+    width:94%;
+
+    max-height:80vh;
+
+}
+
+/* Scroll */
+
+#scrollTopButton{
+
+    width:48px;
+
+    height:48px;
+
+    right:18px;
+
+    bottom:18px;
+
+    font-size:18px;
+
+}
+
+/* Başlıklar */
+
+h1{
+
+    font-size:2.8rem;
+
+}
+
+h2{
+
+    font-size:2rem;
+
+}
+
+}
+
+/* ====================================== */
+
+@media (max-width:480px){
+
+html{
+
+    font-size:14px;
+
+}
+
+.section{
+
+    width:94%;
+
+    margin:45px auto;
+
+}
+
+h1{
+
+    font-size:2.3rem;
+
+}
+
+h2{
+
+    font-size:1.7rem;
+
+}
+
+.photoCard{
+
+    width:240px;
+
+    height:300px;
+
+}
+
+.galleryItem img{
+
+    height:240px;
+
+}
+
+.spotifyCard iframe{
+
+    height:360px !important;
+
+}
+
+.weatherCard,
+.birthdayCard,
+.statCard,
+.todoCard{
+
+    padding:18px;
+
+}
+
+.themeButton{
+
+    width:48px;
+
+    height:48px;
+
+    font-size:18px;
+
+}
+
+}
+
+html,
+body{
+
+    overflow-x:hidden;
+
+}
+
+.spotifyCard h3{
+
+    font-size:1.4rem;
+
+}
+
+@media (max-width:768px){
+
+.hero::before,
+.hero::after{
+
+    display:none;
+
+}
+
+}
+
+.hero{
+
+    margin-inline:auto;
+
+}
+
+.section{
+
+    width:min(1200px,92%);
+
+    margin-inline:auto;
+
+}
+
+.galleryItem{
+
+    width:100%;
+
+}
+
+.galleryItem img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+/*======================================
+    GLOBAL RESPONSIVE FIX
+======================================*/
+
+html,
+body{
+
+    width:100%;
+    overflow-x:hidden;
+
+}
+
+*,
+*::before,
+*::after{
+
+    box-sizing:border-box;
+
+}
+
+img,
+img{
+
+    max-width:100%;
+    height:auto;
+    display:block;
+
+}
+
+iframe{
+
+    max-width:100%;
+    display:block;
+
+}
+
+#letter .todoCard{
+
+    text-align:center;
+
+    line-height:2;
+
+    font-size:1.08rem;
+
+}
+
+#letter b{
+
+    font-size:1.2rem;
+
+}
+
+/*======================================
+        HIZLI ERİŞİM
+======================================*/
+
+
+.quickButton{
+
+    position:fixed;
+
+    top:95px;
+
+    right:22px;
+
+    width:60px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    box-shadow:0 18px 35px rgba(255,95,152,.25);
+
+    z-index:9998;
+
+    transition:.3s;
+
+}
+
+.quickButton:hover{
+
+    transform:rotate(10deg) scale(1.08);
+
+}
+
+.quickPanel.open{
+
+    right:90px;
+
+}
+
+.quickPanel h2{
+
+    text-align:center;
+
+    margin-bottom:18px;
+
+    font-size:1.2rem;
+
+}
+
+.quickPanel button{
+
+    width:100%;
+
+    margin:8px 0;
+
+    padding:13px 15px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.quickPanel button:hover{
+
+    transform:translateX(6px);
+
+}
+
+.quickPanel{
+
+    position:fixed;
+
+    top:95px;
+
+    right:-320px;
+
+    width:260px;
+
+    padding:20px;
+
+    border-radius:22px;
+
+    background:var(--card);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    z-index:9997;
+
+}
+
+@media (max-width:768px){
+
+    .quickButton{
+
+        width:52px;
+        height:52px;
+        font-size:20px;
+
+        top:84px;
+        right:20px;
+    }
+
+    .quickPanel{
+
+        width:280px;
+
+        top:84px;
+
+        left:50%;
+        right:auto;
+
+        transform:translateX(-50%) scale(.95);
+
+        opacity:0;
+        pointer-events:none;
+    }
+
+    .quickPanel.open{
+
+        left:50%;
+        right:auto;
+
+        transform:translateX(-50%) scale(1);
+
+        opacity:1;
+        pointer-events:auto;
+    }
+
+}
