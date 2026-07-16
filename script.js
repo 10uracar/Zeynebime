@@ -91,6 +91,9 @@ themeButton.addEventListener("click", (event)=>{
 
     event.stopPropagation();
 
+    // Hızlı erişim açıksa kapat
+    quickPanel.classList.remove("open");
+
     themePanel.classList.toggle("open");
 
 });
@@ -211,15 +214,17 @@ const savedColor = load("primary-color");
 
 if(savedColor){
 
-    setTheme(savedColor);
+    setTheme(load("primary-color"));
 
     if(customColor){
 
-        customColor.value = savedColor;
+        customColor.value = load("primary-color");
 
     }
 
 }
+
+
 
 /*======================================================
     TANIŞMA SAYACI
@@ -673,13 +678,16 @@ const quickPanel = document.getElementById("quickPanel");
 
 if (quickButton && quickPanel) {
 
-    quickButton.addEventListener("click", (e) => {
+quickButton.addEventListener("click", (e) => {
 
-        e.stopPropagation();
+    e.stopPropagation();
 
-        quickPanel.classList.toggle("open");
+    // Tema merkezi açıksa kapat
+    themePanel.classList.remove("open");
 
-    });
+    quickPanel.classList.toggle("open");
+
+});
 
     document.addEventListener("click", (e) => {
 

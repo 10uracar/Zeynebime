@@ -669,6 +669,107 @@ h2{
 
 }
 
+/*======================================
+        GALLERY HEADER
+======================================*/
+
+.galleryHeader{
+
+    display:flex;
+    justify-content:center;
+    margin:30px 0 40px;
+
+}
+
+.galleryMore{
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    padding:16px 28px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.55);
+
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+body.dark .galleryMore{
+
+    background:rgba(40,40,40,.55);
+
+}
+
+.galleryMore::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+
+    transform:translateX(-140%);
+
+}
+
+.galleryMore:hover::before{
+
+    animation:shine .9s;
+
+}
+
+.galleryMore:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 18px 40px rgba(0,0,0,.14);
+
+}
+
+.galleryMoreIcon{
+
+    font-size:22px;
+
+}
+
+.galleryArrow{
+
+    transition:.3s;
+
+    font-size:20px;
+
+}
+
+.galleryMore:hover .galleryArrow{
+
+    transform:translateX(8px);
+
+}
+
 /* =====================================================
    COUNTER
 ===================================================== */
@@ -2491,5 +2592,17 @@ iframe{
         opacity:1;
         pointer-events:auto;
     }
+
+}
+
+@media(max-width:768px){
+
+.galleryMore{
+
+    width:100%;
+
+    justify-content:center;
+
+}
 
 }

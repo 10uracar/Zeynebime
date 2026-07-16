@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>📚 Galerimiz • Zeynebime</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="gallery.css">
+
+</head>
+
+<body>
+
+<div id="heartsContainer"></div>
+
+<div id="sakuraContainer"></div>
+
+<header class="galleryHero">
+
+    <a href="index.html" class="backButton">
+
+        ← Ana Sayfaya Dön
+
+    </a>
+
+    <div class="heroContent">
+
+        <div class="heroIcon">
+
+            📚
+
+        </div>
+
+        <h1>
+
+            Anılarımız
+
+        </h1>
+
+        <p>
+
+            Seninle yaşadığım güzel anıların küçük bir arşivi.
+
+        </p>
+
+    </div>
+
+</header>
+
+<section class="gallerySection">
+
+<div class="galleryTabs">
+
+    <div class="tabIndicator"></div>
+
+    <button class="tabButton active"
+            data-tab="photos">
+
+        📷 Fotoğraflar
+
+    </button>
+
+    <button class="tabButton"
+            data-tab="videos">
+
+        🎥 Videolar
+
+    </button>
+
+</div>
+
+<div id="photosTab" class="tabContent active">
+
+    <div class="galleryGrid" id="photoGrid">
+
+    </div>
+
+</div>
+
+<div id="videosTab" class="tabContent">
+
+    <div class="galleryGrid" id="videoGrid">
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ======================================
+        LIGHTBOX
+====================================== -->
+
+<div id="lightbox" class="lightbox">
+
+    <div id="lightboxStage">
+
+        <img
+            id="lightboxImage"
+            src=""
+            alt="">
+
+    </div>
+
+    <button id="prevPhoto" class="lightboxButton">
+
+        ←
+
+    </button>
+
+    <button id="nextPhoto" class="lightboxButton">
+
+        →
+
+    </button>
+
+    <button id="closeLightbox">
+
+        ✕
+
+    </button>
+
+    <div id="lightboxCounter">
+
+        1 / 1
+
+    </div>
+
+</div>
+
+<!--======================================
+        VIDEO MODAL
+======================================-->
+
+<div id="videoModal" class="lightbox">
+
+    <div class="videoStage">
+
+<div class="videoWrapper">
+
+    <video
+        id="videoPlayer"
+        autoplay
+        playsinline>
+    </video>
+
+<div id="centerIcon">
+
+    <img
+        id="centerIconImage"
+        src="icons/dark/play.svg"
+        alt="Play">
+
+</div>
+
+<div class="videoControls">
+
+    <div class="controlsTop">
+
+        <button id="prevVideo">
+            <img
+                id="prevVideoIcon"
+                src="icons/dark/skip-back.svg"
+                alt="Önceki">
+        </button>
+
+        <button id="playPause">
+            <img
+                id="playPauseIcon"
+                src="icons/dark/play.svg"
+                alt="Play">
+        </button>
+
+        <button id="nextVideo">
+            <img
+                id="nextVideoIcon"
+                src="icons/dark/skip-forward.svg"
+                alt="Sonraki">
+        </button>
+
+        <button id="muteButton">
+            <img
+                id="muteIcon"
+                src="icons/dark/volume-2.svg"
+                alt="Ses">
+        </button>
+
+        <button id="fullscreenButton">
+            <img
+                id="fullscreenIcon"
+                src="icons/dark/maximize.svg"
+                alt="Tam Ekran">
+        </button>
+
+    </div>
+
+<div class="controlsBottom">
+
+    <span id="currentTime">
+        00:00
+    </span>
+
+    <span id="duration">
+        00:00
+    </span>
+
+</div>
+
+<input
+    type="range"
+    id="videoProgress"
+    min="0"
+    max="100"
+    value="0">
+</div>
+
+</div> <!-- videoWrapper -->
+
+</div> <!-- videoStage -->
+
+<button id="closeVideo">
+
+    ✕
+
+</button>
+
+</div> <!-- videoModal -->
+
+<!-- Theme Button -->
+
+<button
+    id="themeButton"
+    class="themeButton">
+
+    ⚙️
+
+</button>
+
+<!-- Theme Panel -->
+
+<aside
+    id="themePanel"
+    class="themePanel">
+
+    <h2>
+
+        🎨 Tema Merkezi
+
+    </h2>
+
+    <div class="themeGrid">
+
+        <button
+            class="themeColor"
+            data-color="#ff5f98">
+
+            🍓 Strawberry
+
+        </button>
+
+        <button
+            class="themeColor"
+            data-color="#ff8ec5">
+
+            🌸 Sakura
+
+        </button>
+
+        <button
+            class="themeColor"
+            data-color="#9d7dff">
+
+            💜 Lavender
+
+        </button>
+
+        <button
+            class="themeColor"
+            data-color="#55a8ff">
+
+            💙 Ocean
+
+        </button>
+
+        <button
+            class="themeColor"
+            data-color="#47c97b">
+
+            💚 Mint
+
+        </button>
+
+        <button
+            class="themeColor"
+            data-color="#ff944d">
+
+            🧡 Sunset
+
+        </button>
+
+        <button
+            class="themeColor"
+            data-color="#2d2d44">
+
+            🌙 Midnight
+
+        </button>
+
+    </div>
+
+    <label>
+
+        Özel Renk
+
+    </label>
+
+    <input
+        type="color"
+        id="customColor"
+        value="#ff5f98">
+
+    <div class="themeModes">
+
+        <button id="lightMode">
+
+            ☀️ Açık
+
+        </button>
+
+        <button id="darkMode">
+
+            🌙 Koyu
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+<script src="gallery.js"></script>
+
+</body>
+
+</html>
+
