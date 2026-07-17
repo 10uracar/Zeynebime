@@ -92,12 +92,13 @@ color .35s ease;
 ======================================*/
 
 .backButton{
-
     position:absolute;
-
     left:0;
-
     top:45px;
+
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
 
     padding:14px 22px;
 
@@ -113,10 +114,11 @@ color .35s ease;
 
     font-weight:600;
 
+    line-height:1;
+
     box-shadow:var(--shadow);
 
     transition:.35s;
-
 }
 
 .backButton:hover{
@@ -557,6 +559,12 @@ color .35s ease;
     top:50%;
 
     transform:translateY(-50%);
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+line-height:1;
 
     width:60px;
 
